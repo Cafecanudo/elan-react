@@ -14,6 +14,7 @@ export default class Dashboard extends Component {
     this.state = {
       title: props.title,
     }
+    this.widgets = this.widgets.bind(this)
   }
 
   widgets() {
@@ -36,18 +37,18 @@ export default class Dashboard extends Component {
             </div>
 
             <div className="row">
-              <div className="col">
+              <div className="col-md-6">
                 <VisalGeral/>
               </div>
-              <div className="col">
+              <div className="col-md-6">
                 <VisaoBrasil/>
               </div>
             </div>
             <div className="row">
-              <div className="col">
+              <div className="col-md-6">
                 <RankingLojas/>
               </div>
-              <div className="col">
+              <div className="col-md-6">
                 <NotasNaoEnviadasSefaz/>
               </div>
             </div>

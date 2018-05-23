@@ -27,7 +27,7 @@ export default class Dialog extends Component {
 
   alinhar() {
     if (this.props.visible) {
-      var v = $('.dialog-modal .dialog-content')
+      var v = $('#' + this.props.id).find('.dialog-content')
       v.css({
         'margin-left': (v.outerWidth() / 2) * -1,
       })
@@ -35,8 +35,8 @@ export default class Dialog extends Component {
   }
 
   show() {
-    $('.dialog-modal .showbox').fadeOut()
-    $('.dialog-modal .dialog-content').fadeIn()
+    $('#' + this.props.id).find('.showbox').fadeOut()
+    $('#' + this.props.id).find('.dialog-content').fadeIn()
     this.setState({
       time: setInterval(this.alinhar, 100)
     })
@@ -49,7 +49,7 @@ export default class Dialog extends Component {
 
   render() {
     return (
-      <div className="dialog-modal" style={this.props.visible ? {display: 'block'} : {display: 'none'}}>
+      <div id={this.props.id} className="dialog-modal" style={this.props.visible ? {display: 'block'} : {display: 'none'}}>
         <div className="showbox">
           <div className="loader">
             <svg className="circular" viewBox="25 25 50 50">
