@@ -41,6 +41,7 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
     new CopyWebpackPlugin([
+      {from: 'public/import', to: 'import'},
       {from: 'node_modules/font-awesome/fonts', to: 'fonts'},
       {from: 'node_modules/ionicons/dist/fonts', to: 'fonts'}
     ]),
