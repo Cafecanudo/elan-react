@@ -7,58 +7,65 @@ export default class VisaoBrasil extends Component {
     super(props);
     this.state = {
       dataProvider: [{
-        "country": "USA",
-        "visits": 3025,
-        "color": "#FF0F00"
+        "country": "AC",
+        "online": 248,
+        "contingencia": 81
       }, {
-        "country": "China",
-        "visits": 1882,
-        "color": "#FF6600"
+        "country": "AL",
+        "online": 240,
+        "contingencia": 120
       }, {
-        "country": "Japan",
-        "visits": 1809,
-        "color": "#FF9E01"
+        "country": "AM",
+        "online": 229,
+        "contingencia": 186
       }, {
-        "country": "Germany",
-        "visits": 1322,
-        "color": "#FCD202"
+        "country": "AP",
+        "online": 167,
+        "contingencia": 56
       }, {
-        "country": "UK",
-        "visits": 1122,
-        "color": "#F8FF01"
+        "country": "DF",
+        "online": 249,
+        "contingencia": 45
       }, {
-        "country": "France",
-        "visits": 1114,
-        "color": "#B0DE09"
+        "country": "ES",
+        "online": 214,
+        "contingencia": 32
       }, {
-        "country": "India",
-        "visits": 984,
-        "color": "#04D215"
+        "country": "GO",
+        "online": 241,
+        "contingencia": 66
       }, {
-        "country": "Spain",
-        "visits": 711,
-        "color": "#0D8ECF"
+        "country": "MA",
+        "online": 143,
+        "contingencia": 78
       }, {
-        "country": "Netherlands",
-        "visits": 665,
-        "color": "#0D52D1"
+        "country": "MS",
+        "online": 225,
+        "contingencia": 0
       }, {
-        "country": "Russia",
-        "visits": 580,
-        "color": "#2A0CD0"
+        "country": "MT",
+        "online": 123,
+        "contingencia": 43
       }, {
-        "country": "South Korea",
-        "visits": 443,
-        "color": "#8A0CCF"
+        "country": "PA",
+        "online": 176,
+        "contingencia": 73
       }, {
-        "country": "Canada",
-        "visits": 441,
-        "color": "#CD0D74"
-      }],
-      "valueAxes": [{
-        "axisAlpha": 0,
-        "position": "left",
-        "title": "Visitors from country"
+        "country": "RJ",
+        "online": 139,
+        "contingencia": 34
+      }, {
+        "country": "RN",
+        "online": 138,
+        "contingencia": 45
+      }, {
+        "country": "RS",
+        "online": 111,
+        "contingencia": 21
+      }, {
+        "country": "SP",
+        "online": 269,
+        "contingencia": 68
       }]
     }
   }
@@ -75,33 +82,40 @@ export default class VisaoBrasil extends Component {
 
   config() {
     return {
-      "type": "serial",
       "theme": "light",
-      "marginRight": 70,
+      "type": "serial",
       "dataProvider": this.state.dataProvider,
+      "valueAxes": [{
+        "unit": "%",
+        "position": "left",
+        "title": "GDP growth rate",
+      }],
       "startDuration": 1,
       "graphs": [{
-        "balloonText": "<b>[[category]]: [[value]]</b>",
-        "fillColorsField": "color",
+        "balloonText": "[[category]] (Online): <b>[[value]]</b>",
         "fillAlphas": 0.9,
         "lineAlpha": 0.2,
+        "title": "Online",
         "type": "column",
-        "valueField": "visits"
+        "valueField": "online"
+      }, {
+        "balloonText": "[[category]] (Contingência): <b>[[value]]</b>",
+        "fillAlphas": 0.9,
+        "lineAlpha": 0.2,
+        "title": "Contingência",
+        "type": "column",
+        "clustered":false,
+        "columnWidth":0.5,
+        "valueField": "contingencia"
       }],
-      "chartCursor": {
-        "categoryBalloonEnabled": false,
-        "cursorAlpha": 0,
-        "zoomable": false
-      },
+      "plotAreaFillAlphas": 0.1,
       "categoryField": "country",
       "categoryAxis": {
-        "gridPosition": "start",
-        "labelRotation": 45
+        "gridPosition": "start"
       },
       "export": {
         "enabled": true
       }
-
     }
   }
 

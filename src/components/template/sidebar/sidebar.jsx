@@ -31,7 +31,7 @@ export default class Sidebar extends Component {
           <LogoFavicon/>
           <div className="sidebar">
             <DadosUsuario usuario={this.state.usuario}/>
-            <Menu usuario={this.state.usuario}/>
+            <Menu usuario={this.state.usuario} actionFullscreen={this.props.actionFullscreen}/>
           </div>
 
         </aside>

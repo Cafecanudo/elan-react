@@ -16,10 +16,15 @@ export default class Menu extends Component {
           ]
         },
         {
-          url: '/settings', icon: 'television', display: 'Modo Monitor'
+          url: '#/settings', icon: 'television', display: 'Modo Monitor', click: props.actionFullscreen, id: 'monitor'
         }
       ]
     }
+    this.clickFull = this.clickFull.bind(this)
+  }
+
+  clickFull(){
+
   }
 
   componentDidMount() {
@@ -35,7 +40,7 @@ export default class Menu extends Component {
 
   loadMenus() {
     return this.state.menus.map((_it, i) => (
-      <li key={i} className="nav-item has-treeview">
+      <li id={_it.id} key={i} className="nav-item has-treeview" onClick={_it.click || null}>
         <a href={_it.url || '#'} className="nav-link">
           <i className={'nav-icon fa fa-' + _it.icon}></i>
           <p>

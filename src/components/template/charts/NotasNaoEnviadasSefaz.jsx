@@ -7,44 +7,50 @@ export default class NotasNaoEnviadasSefaz extends Component {
     super(props);
     this.state = {
       dataProvider: [{
-        "country": "USA",
-        "visits": 2025
+        "country": "AC",
+        "contingencia": 21
       }, {
-        "country": "China",
-        "visits": 1882
+        "country": "AL",
+        "contingencia": 32
       }, {
-        "country": "Japan",
-        "visits": 1809
+        "country": "AM",
+        "contingencia": 23
       }, {
-        "country": "Germany",
-        "visits": 1322
+        "country": "AP",
+        "contingencia": 11
       }, {
-        "country": "UK",
-        "visits": 1122
+        "country": "DF",
+        "contingencia": 9
       }, {
-        "country": "France",
-        "visits": 1114
+        "country": "ES",
+        "contingencia": 17
       }, {
-        "country": "India",
-        "visits": 984
+        "country": "GO",
+        "contingencia": 12
       }, {
-        "country": "Spain",
-        "visits": 711
+        "country": "MA",
+        "contingencia": 21
       }, {
-        "country": "Netherlands",
-        "visits": 665
+        "country": "MS",
+        "contingencia": 0
       }, {
-        "country": "Russia",
-        "visits": 580
+        "country": "MT",
+        "contingencia": 45
       }, {
-        "country": "South Korea",
-        "visits": 443
+        "country": "PA",
+        "contingencia": 32
       }, {
-        "country": "Canada",
-        "visits": 441
+        "country": "RJ",
+        "contingencia": 31
       }, {
-        "country": "Brazil",
-        "visits": 395
+        "country": "RN",
+        "contingencia": 22
+      }, {
+        "country": "RS",
+        "contingencia": 21
+      }, {
+        "country": "SP",
+        "contingencia": 68
       }]
     }
   }
@@ -76,7 +82,7 @@ export default class NotasNaoEnviadasSefaz extends Component {
         "fillAlphas": 0.8,
         "lineAlpha": 0.2,
         "type": "column",
-        "valueField": "visits"
+        "valueField": "contingencia"
       }],
       "chartCursor": {
         "categoryBalloonEnabled": false,

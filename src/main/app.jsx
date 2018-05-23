@@ -48,7 +48,7 @@ export default class AppComponent extends Component {
     this.setState({ isFull: !this.state.isFull });
   }
 
-  setErroWidget(item) {
+  setErroWidget() {
     this.setState({
       widgets: [
         { type: 'danger', value: '22.345', display: 'NFS-e Internalizadas no Mês' },
@@ -109,6 +109,7 @@ export default class AppComponent extends Component {
     if (s) {
       $('body').addClass('sidebar-open sidebar-collapse container-full')
     } else {
+      $('#monitor a').removeClass('active')
       $('body').removeClass('sidebar-open sidebar-collapse container-full')
     }
   }
@@ -120,8 +121,8 @@ export default class AppComponent extends Component {
           {this.state.chartDialog || ''}
         </Dialog>
         <div className="wrapper">
-          <Navbar widgetsAction={this.setErroWidget} actionFullscreen={this.goFull} />
-          <Sidebar />
+          <Navbar widgetsAction={this.setErroWidget} actionFullscreen={this.goFull}/>
+          <Sidebar actionFullscreen={this.goFull}/>
           <Dashboard widgets={this.state.widgets} breadcumbs={this.state.breadcumbs} title={this.state.title} />
           <Footer />
         </div>
