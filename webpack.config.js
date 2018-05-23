@@ -11,7 +11,7 @@ module.exports = {
   mode: "development",
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: './app.js'
   },
   devServer: {
@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'ELAN | Eldoc Analytics',
-      template: './public/index.html'
+      template: './public/index.html',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
