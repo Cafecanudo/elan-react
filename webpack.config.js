@@ -13,7 +13,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: './app.js',
-    publicPath: path.resolve(__dirname, "public"),
   },
   devServer: {
     port: process.env.PORT || 8000,
