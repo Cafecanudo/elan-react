@@ -133,9 +133,6 @@ export default class VisalGeral extends Component {
     return {
       "type": "serial",
       "theme": "light",
-      "legend": {
-        "useGraphSettings": true
-      },
       "dataProvider": this.state.dataProvider,
       "synchronizeGrid": true,
       "valueAxes": [],
@@ -145,7 +142,7 @@ export default class VisalGeral extends Component {
         "bullet": "round",
         "bulletBorderThickness": 1,
         "hideBulletsCount": 30,
-        "title": "Notas MID",
+        "title": "Notas ELDOC",
         "valueField": "visits",
         "fillAlphas": 0
       }, {

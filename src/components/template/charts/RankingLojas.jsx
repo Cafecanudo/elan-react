@@ -69,11 +69,6 @@ export default class RankingLojas extends Component {
       "theme": "light",
       "type": "serial",
       "dataProvider": this.state.dataProvider,
-      "valueAxes": [{
-        "unit": "%",
-        "position": "left",
-        "title": "GDP growth rate",
-      }],
       "startDuration": 1,
       "graphs": [{
         "balloonText": "[[category]] (Contingência %): <b>[[value]]</b>",
