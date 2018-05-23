@@ -175,7 +175,6 @@ export default class AppComponent extends Component {
           {this.state.chartDialog || ''}
         </Dialog>
 
-        <ChartRealTimeSync title="Comunicação Sefaz" dataProvider={this.state.dataPrividerSefazSync}/>
         <Dialog id="chartDialogSync" visible={this.state.dialogVisibleSync} closeDialog={this.closeDialogSync}>
           {this.state.chartDialogSync || ''}
         </Dialog>
