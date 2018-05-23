@@ -48,6 +48,7 @@
     "@amcharts/amcharts3-react": "^3.0.0"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "rc-dialog": "^7.1.4",
     "react-full-screen": "^0.2.2"
   }
