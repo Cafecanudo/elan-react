@@ -6,13 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: [
-    './src/index.jsx'
+    './src/index.jsx',
   ],
   mode: "development",
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: './app.js'
+    filename: './app.js',
+    publicPath: path.resolve(__dirname, "public"),
   },
   devServer: {
     port: process.env.PORT || 8000,
